@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+</head>
+<body>
+    <script>
+        var dataAtual = new Date();
+        var listaParticipante = [];
+        var listaPalestrante = [];
+        var listaPalestra = [];
+
+        do{
+            var evento = prompt("Qual o nome do evento? ");
+            var dataEvento = new Date(prompt("Digite a data YYYY/MM/DD"));
+        if(dataEvento<dataAtual){
+            alert("Data inválida! ");
+        }
+    }
+    while(dataEvento<dataAtual);
+
+    var totalParticipante = 0;
+    var totalPalestrante = 0;
+    var opcao = 1;
+
+    while (opcao != 0){
+        opcao = prompt("Menu, digite as opções: \n1 - Ser Palestrante \n2 - Ser Participante \n3 - Exibir Palestrantes \n0- Sair ");
+        if(opcao == 1){
+            listaParticipante[totalParticipante] = prompt("Qual seu nome?: ");
+            listaPalestrante[totalPalestrante] = prompt("Qual o tema da palestra");
+            totalPalestrante++;
+        }
+        else if(opcao == 2){
+            var idade = parseInt(prompt("Digite sua idade (em anos): "));
+            if(idade>=18){
+                listaParticipante[totalParticipante] =  prompt("Digite seu nome: ");
+                totalParticipante++
+            }else{
+                alert("Acesso não permitido ");
+                }
+            }
+            else if(opcao == 3){
+                var exibir = "Palestrantes e Palestra: \n"
+                for(var i=0; i<totalPalestrante; i++){
+                    exebir +=listaPalestrante[totalPalestrante]+ " - " ;
+                    exebir +=listaPalestra[totalPalestra]; 
+                }
+                alert(exibir); 
+            }
+
+        }
+
+    </script>
+</body>
+</html>
