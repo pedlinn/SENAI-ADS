@@ -1,0 +1,16 @@
+{
+  "produtos": [
+    {
+      "id": "28c4",
+      "nome": "Teclado Dell",
+      "descricao": "Teclado original da Dell para desktop",
+      "valor": "120.00"
+    },
+    {
+      "id": "eff1",
+      "nome": "Teclado Dell",
+      "descricao": "Teclado original da Dell para desktop",
+      "valor": "120.00"
+    }
+  ]
+}
