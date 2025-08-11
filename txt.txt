@@ -1,0 +1,23 @@
+-- Quais são os produtos que já foram pedidos alguma vez ?
+SELECT DISTINCT cd_produto, nm_produto
+FROM tb_produto
+WHERE cd_produto IN(SELECT cd_produto FROM tb_pedido);
+
+-- Quais são os produtos nunca pedidos?
+SELECT cd_produto, nm_produto
+FROM tb_produto
+WHERE cd_produto NOT IN(SELECT cd_produto FROM tb_pedido);
+-- Qual o produto mais pedido?
+-- Qual o produto mais caro?
+SELECT * FROM tb_produto
+WHERE vl_produto = (SELECT MAX(vl_produto) FROM tb_produto);
+-- Qual cliente fez mais pedidos (quantidade)?
+-- Qual o cliente que mais comprou(valor)?
+-- Qual restaurante teve mais pedidos?
+-- Qual restante teve maior média de avaliação?
+-- Cadastre-se como cliente, e faça um pedido com:
+      --  1 Ravioli de Queijo
+      --  2 Tiramisu
+      --  1 Suco de Uva
+-- Confira o total do seu pedido, e se a bate com a soma dos itens pedidos
+SELECT (28.9*1) + (18*2) + (10*1) AS total;
